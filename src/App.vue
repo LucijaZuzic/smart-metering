@@ -50,13 +50,13 @@
         <div class='col'>
           <b-button-group>
             <b-button v-on:click='resetmicroparticle()'>Reset microparticle</b-button>         
-            <a class = 'btn btn-secondary' href='http://192.168.1.10:3000/microparticle.txt' download='microparticle.txt'>Download microparticle</a>
+            <a class = 'btn btn-secondary' href='http://192.168.1.10:3000/microparticle.json' download='microparticle.json'>Download microparticle</a>
           </b-button-group>
         </div>
         <div class='col'>
           <b-button-group>
             <b-button v-on:click='reset()'>Reset file</b-button>         
-            <a class = 'btn btn-secondary' href='http://192.168.1.10:3000/bme680.txt' download='bme680.txt'>Download file</a>
+            <a class = 'btn btn-secondary' href='http://192.168.1.10:3000/bme680.json' download='bme680.json'>Download file</a>
           </b-button-group>
         </div>
         <div class='col'>
