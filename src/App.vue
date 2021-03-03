@@ -114,6 +114,7 @@ var c = ['brown','purple','red','orange','yellow','green','dark green'];
 export default {
   name: 'App',
   mounted() {    
+    this.killvideo();
     this.time_elapsed = setInterval(() => (this.time_elapsed += this.getme), 1000);
   },
   data: () => ({
@@ -641,31 +642,28 @@ export default {
         console.log(error);
       });
     },
-    startvideo() {
-      axios.get('http://192.168.1.10:3000/killvideo/', {
+    video() {
+      axios.get('http://192.168.1.10:3000/video/', {
       })
       .then(() => {
-        axios.get('http://192.168.1.10:3000/video/', {
-        })
-        .then(() => {
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-        window.location = 'http://192.168.1.10:5050';
+        window.location = 'http://192.168.1.10:8081';
       })
       .catch((error) => {
         console.log(error);
       });
     },
-    video() {
-      window.location = 'http://192.168.1.10:8081';
-    },
     getanimage() {
-      axios.get('http://192.168.1.10:3000/image/', {
+      axios.get('http://192.168.1.10:3000/killvideo/', {
       })
       .then(() => {
-        
+        axios.get('http://192.168.1.10:3000/image/', {
+        })
+        .then(() => {
+
+        })
+        .catch((error) => {
+          console.log(error);
+        });
       })
       .catch((error) => {
         console.log(error);
